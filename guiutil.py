@@ -28,7 +28,7 @@ def encrypt_file():
 
 def decrypt_file():
     file_path = filedialog.askopenfilename(title="Selecione o arquivo a ser descriptografado")
-    key_file_path = file_path + ".key"
+    key_file_path = filedialog.askopenfilename(title="Selecione o arquivo key")
     if file_path:
         try:
             with open(key_file_path, 'rb') as key_file:
